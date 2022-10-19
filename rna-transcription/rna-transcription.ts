@@ -1,4 +1,4 @@
-export function toRna(input: string): any {
+export function toRna(input: string): string {
   const transcript: { [key: string]: string } = {
     G: "C",
     C: "G",
@@ -7,7 +7,7 @@ export function toRna(input: string): any {
   };
   const arrInput: string[] = [...input];
 
-  const arrTranscribed: any[] = [];
+  const arrTranscribed: string[] & undefined[] = [];
 
   arrInput.forEach(function (c) {
     arrTranscribed.push(transcript[c]);
